@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Aikiko from "./pages/Aikiko";
+import AikikoChat from "./pages/AikikoChat";
 import AikikoDashboard from "./pages/AikikoDashboard";
 import ProjectDetails from "./pages/ProjectDetails";
 import NotFound from "./pages/NotFound";
@@ -22,6 +23,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/aikiko" element={<Aikiko />} />
+            <Route path="/aikiko/chat" element={<AikikoChat />} />
+            <Route path="/aikiko/whale-tracker" element={<AikikoChat />} />
+            <Route path="/aikiko/sentiment-analysis" element={<AikikoChat />} />
+            <Route path="/aikiko/technical-analysis" element={<AikikoChat />} />
+            <Route path="/aikiko/portfolio" element={<AikikoChat />} />
             <Route path="/dashboard" element={<AikikoDashboard />} />
             <Route path="/project-details" element={<ProjectDetails />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
