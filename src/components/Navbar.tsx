@@ -45,15 +45,6 @@ const Navbar = () => {
               <Target className="h-4 w-4" />
               Project
             </Link>
-            <a
-              href="https://fil-e-rug-sigma.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-primary transition-colors flex items-center gap-2"
-            >
-              <Target className="h-4 w-4" />
-              Rug Guardian
-            </a>
             <button
               onClick={() => scrollToSection('news-analysis')}
               className="text-foreground/80 hover:text-primary transition-colors flex items-center gap-2"
@@ -112,16 +103,6 @@ const Navbar = () => {
                 <Target className="h-4 w-4" />
                 Project
               </Link>
-              <a
-                href="https://fil-e-rug-sigma.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-left text-foreground/80 hover:text-primary transition-colors flex items-center gap-2 p-2"
-                onClick={() => setIsOpen(false)}
-              >
-                <Target className="h-4 w-4" />
-                Rug Guardian
-              </a>
               <button
                 onClick={() => scrollToSection('news-analysis')}
                 className="text-left text-foreground/80 hover:text-primary transition-colors flex items-center gap-2 p-2"
