@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -13,10 +13,13 @@ import {
   ArrowRight
 } from 'lucide-react';
 import Navbar from "@/components/Navbar";
+import ServiceSelectionModal from "@/components/ServiceSelectionModal";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Index = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -93,12 +96,14 @@ const Index = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Link to="/aikiko">
-              <Button size="lg" className="text-lg px-8 py-4 glow-primary group">
-                Try WhaleEye
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-4 glow-primary group"
+              onClick={() => setIsModalOpen(true)}
+            >
+              Try WhaleEye
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
           </motion.div>
         </div>
       </motion.section>
@@ -271,6 +276,11 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+      <ServiceSelectionModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };
