@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Brain, Activity, Newspaper, Target, MessageCircle } from "lucide-react";
+import { Menu, X, Brain, Target } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,34 +32,13 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
-              to="/dashboard"
-              className="text-foreground/80 hover:text-primary transition-colors flex items-center gap-2"
-            >
-              <Activity className="h-4 w-4" />
-              Dashboard
-            </Link>
-            <Link
               to="/project-details"
               className="text-foreground/80 hover:text-primary transition-colors flex items-center gap-2"
             >
               <Target className="h-4 w-4" />
-              Project
+              About WhaleEye
             </Link>
-            <button
-              onClick={() => scrollToSection('news-analysis')}
-              className="text-foreground/80 hover:text-primary transition-colors flex items-center gap-2"
-            >
-              <Newspaper className="h-4 w-4" />
-              News Analysis
-            </button>
-            <Link
-              to="/aikiko"
-              className="text-foreground/80 hover:text-primary transition-colors flex items-center gap-2"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Chat
-            </Link>
-            <Link to="/dashboard">
+            <Link to="/aikiko">
               <Button variant="default" className="glow-primary">
                 Get Started
               </Button>
@@ -88,37 +67,14 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-4">
               <Link
-                to="/dashboard"
-                className="text-left text-foreground/80 hover:text-primary transition-colors flex items-center gap-2 p-2"
-                onClick={() => setIsOpen(false)}
-              >
-                <Activity className="h-4 w-4" />
-                Dashboard
-              </Link>
-              <Link
                 to="/project-details"
                 className="text-left text-foreground/80 hover:text-primary transition-colors flex items-center gap-2 p-2"
                 onClick={() => setIsOpen(false)}
               >
                 <Target className="h-4 w-4" />
-                Project
+                About WhaleEye
               </Link>
-              <button
-                onClick={() => scrollToSection('news-analysis')}
-                className="text-left text-foreground/80 hover:text-primary transition-colors flex items-center gap-2 p-2"
-              >
-                <Newspaper className="h-4 w-4" />
-                News Analysis
-              </button>
-              <Link
-                to="/aikiko"
-                className="text-left text-foreground/80 hover:text-primary transition-colors flex items-center gap-2 p-2"
-                onClick={() => setIsOpen(false)}
-              >
-                <MessageCircle className="h-4 w-4" />
-                Chat
-              </Link>
-              <Link to="/dashboard">
+              <Link to="/aikiko">
                 <Button variant="default" className="glow-primary self-start">
                   Get Started
                 </Button>
