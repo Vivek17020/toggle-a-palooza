@@ -2,56 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Aikiko Crypto Intelligence Platform Design System
+All colors MUST be HSL. Crypto/fintech aesthetic with dark theme and neon accents.
 */
 
 @layer base {
   :root {
-    --background: 240 10% 98%;
-    --foreground: 240 10% 9%;
+    /* Crypto Dark Theme */
+    --background: 217 33% 7%;
+    --foreground: 180 100% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 9%;
+    /* Cards with subtle glow */
+    --card: 217 33% 10%;
+    --card-foreground: 180 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 9%;
+    --popover: 217 33% 8%;
+    --popover-foreground: 180 100% 95%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 100%;
+    /* Electric blue primary */
+    --primary: 194 100% 50%;
+    --primary-foreground: 217 33% 7%;
+    --primary-glow: 194 100% 60%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 6% 10%;
+    /* Subtle secondary */
+    --secondary: 217 33% 15%;
+    --secondary-foreground: 180 100% 85%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 217 33% 12%;
+    --muted-foreground: 180 20% 60%;
 
-    --accent: 240 5% 96%;
-    --accent-foreground: 240 6% 10%;
+    /* Cyan accent */
+    --accent: 180 100% 50%;
+    --accent-foreground: 217 33% 7%;
 
+    /* Red for losses/alerts */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 262 83% 58%;
+    /* Success green for gains */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning amber */
+    --warning: 43 96% 56%;
+    --warning-foreground: 217 33% 7%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 15%;
+    --ring: 194 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Toggle specific colors */
-    --toggle-bg: 240 5% 84%;
-    --toggle-bg-checked: 262 83% 58%;
-    --toggle-thumb: 0 0% 100%;
-    --toggle-shadow: 0 2px 8px -2px hsl(240 10% 9% / 0.15);
-    --toggle-shadow-focus: 0 0 0 3px hsl(262 83% 58% / 0.2);
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(282 83% 68%));
-    --gradient-background: linear-gradient(180deg, hsl(240 10% 98%), hsl(240 8% 95%));
-
+    /* Custom crypto gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(194 100% 50%), hsl(180 100% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 33% 15%), hsl(217 33% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 33% 7%), hsl(217 33% 12%));
+    
+    /* Glow effects */
+    --glow-primary: 0 0 40px hsl(194 100% 50% / 0.3);
+    --glow-accent: 0 0 40px hsl(180 100% 50% / 0.3);
+    
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -70,45 +83,18 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 240 10% 4%;
-    --foreground: 240 5% 96%;
-
-    --card: 240 10% 6%;
-    --card-foreground: 240 5% 96%;
-
-    --popover: 240 10% 6%;
-    --popover-foreground: 240 5% 96%;
-
-    --primary: 262 83% 58%;
+  .light {
+    /* Light theme (secondary, crypto platforms often default to dark) */
+    --background: 0 0% 100%;
+    --foreground: 217 33% 7%;
+    --card: 0 0% 98%;
+    --card-foreground: 217 33% 7%;
+    --primary: 194 100% 45%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 240 5% 96%;
-
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 64%;
-
-    --accent: 240 4% 16%;
-    --accent-foreground: 240 5% 96%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 240 5% 96%;
-
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 262 83% 58%;
-
-    /* Toggle specific colors - dark mode */
-    --toggle-bg: 240 4% 16%;
-    --toggle-bg-checked: 262 83% 58%;
-    --toggle-thumb: 0 0% 100%;
-    --toggle-shadow: 0 2px 8px -2px hsl(240 10% 4% / 0.3);
-    --toggle-shadow-focus: 0 0 0 3px hsl(262 83% 58% / 0.2);
-
-    /* Gradients - dark mode */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(282 83% 68%));
-    --gradient-background: linear-gradient(180deg, hsl(240 10% 4%), hsl(240 8% 6%));
+    --secondary: 217 33% 95%;
+    --secondary-foreground: 217 33% 7%;
+    --border: 217 33% 90%;
+    --input: 217 33% 90%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -126,6 +112,43 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    background-image: radial-gradient(circle at 50% 50%, hsl(194 100% 50% / 0.05) 0%, transparent 50%);
+  }
+
+  /* Custom scrollbar for crypto aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer components {
+  /* Crypto glow utilities */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

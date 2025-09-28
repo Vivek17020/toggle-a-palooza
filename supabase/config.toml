@@ -1,0 +1,10 @@
+project_id = "ptcffpiqkrpblonmkmba"
+
+[functions.whale-analyzer]
+verify_jwt = false
+
+[functions.news-analyst]
+verify_jwt = false
+
+[functions.orchestrator]
+verify_jwt = false
