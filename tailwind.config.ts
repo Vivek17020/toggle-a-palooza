@@ -47,6 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        toggle: {
+          bg: "hsl(var(--toggle-bg))",
+          "bg-checked": "hsl(var(--toggle-bg-checked))",
+          thumb: "hsl(var(--toggle-thumb))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +85,34 @@ export default {
             height: "0",
           },
         },
+        "toggle-bounce": {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "50%": {
+            transform: "scale(1.05)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "toggle-bounce": "toggle-bounce 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-background": "var(--gradient-background)",
+      },
+      boxShadow: {
+        "toggle": "var(--toggle-shadow)",
+        "toggle-focus": "var(--toggle-shadow-focus)",
+      },
+      transitionTimingFunction: {
+        "smooth": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
       },
     },
   },
