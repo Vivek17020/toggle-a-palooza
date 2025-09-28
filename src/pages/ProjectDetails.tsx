@@ -129,7 +129,7 @@ const ProjectDetails = () => {
             <div className="text-center mb-8">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Brain className="h-10 w-10 text-primary" />
-                <h1 className="text-3xl md:text-4xl font-bold gradient-text">Aikiko Project Overview</h1>
+                <h1 className="text-3xl md:text-4xl font-bold gradient-text">WhaleEye Project Overview</h1>
               </div>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 AI-powered cryptocurrency intelligence platform combining whale tracking, sentiment analysis, and real-time market insights
@@ -176,7 +176,7 @@ const ProjectDetails = () => {
               <Brain className="h-12 w-12 text-primary" />
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold gradient-text">
-                  Aikiko Project Details
+                  WhaleEye Project Details
                 </h1>
                 <p className="text-xl text-muted-foreground mt-2">
                   Comprehensive Cryptocurrency Intelligence Platform
@@ -192,7 +192,7 @@ const ProjectDetails = () => {
             </div>
             
             <p className="text-lg text-muted-foreground max-w-4xl leading-relaxed">
-              Aikiko is an advanced AI-powered cryptocurrency analysis platform that combines whale wallet tracking, 
+              WhaleEye is an advanced AI-powered cryptocurrency analysis platform that combines whale wallet tracking, 
               market sentiment analysis, and intelligent orchestration to provide comprehensive market intelligence. 
               Built with modern web technologies and powered by cutting-edge AI agents.
             </p>
@@ -371,7 +371,7 @@ const ProjectDetails = () => {
         className="py-12 px-6 bg-gradient-to-r from-primary/10 to-primary/5"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Experience Aikiko?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Experience WhaleEye?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Try our live demo to see the power of AI-driven cryptocurrency analysis in action.
           </p>
@@ -409,7 +409,7 @@ const ProjectDetails = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
               <Brain className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold gradient-text">Aikiko</span>
+              <span className="text-lg font-bold gradient-text">WhaleEye</span>
             </div>
             
             <div className="flex items-center gap-6">
